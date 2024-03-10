@@ -1,0 +1,13 @@
+How to use easykube (ek) (compare with kubectl. Run 'ek' directly will see detail Usage)
+  1. Use key words to filter K8s resource name, e.g: ek get ns -n partOfNsName
+  2. Configure the arguments in config file (~/.et/config.yaml) permanentyly, so that no need to set the arguments ervery time, e.g: ek config -n partOfNsName
+  3. Reset the value of arguments in config file (~/.et/config.yaml),  e.g: ek config -n reset 
+  4. Temporarily clear the value of arguments when execute ek command, e.g: ek get ns -n reset
+  5. Supported permanent arguments include kubeconfig file/node name/namespace name/pod name/container name, you can see them with 'ek config'
+  6. Supported command detail list please run 'ek' directly.
+  7. Setup kubeconfig to access k8s API sever
+     1. Specify the kubeconfig file path when executed ek command, e.g: ek get ns --kubeconfig=/path/to/kubeconfig.yaml
+     2. Get the kubeconfig file path from ek config file (~/.ek/config.yaml), you can see it with "ek config"
+     3. Get the kubeconfig file path from OS env, you can see it with shell command "env | grep KUBECONFIG"
+     4. Get the kubeconfig file from k8s default config file path (~/.kube/config)
+     5. Use the k8s default API server URL:  http://localhost:8080 
