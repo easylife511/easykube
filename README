@@ -1,3 +1,9 @@
+How to install:
+  1. git clone https://github.com/liuchaoc21/easykube.git
+  2. cd easykube
+     windows: go build -o ek.exe .\main.go
+     Linux:   go build -o ek main.go 
+
 How to use easykube (ek) (compare with kubectl. Run 'ek' directly will see detail Usage)
   1. Use key words to filter K8s resource name, e.g: ek get ns -n partOfNsName
   2. Configure the arguments in config file (~/.et/config.yaml) permanentyly, so that no need to set the arguments ervery time, e.g: ek config -n partOfNsName
